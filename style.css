@@ -31,6 +31,19 @@ h1, h2, h3, h4 {
     column-gap: 50px;
     row-gap: 25px;
 }
+
+@media (max-width: calc(210ch + 150px)) {
+  .container {
+    grid-template-columns: 
+      minmax(20ch, 30ch) 
+      1fr;
+    grid-template-areas:
+      "...      typehead"
+      "toc      intro"
+      "directory     main";
+  }
+}
+
 .guide{
   grid-column: 3;
   grid-area: main;
