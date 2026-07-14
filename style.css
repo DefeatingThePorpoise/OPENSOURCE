@@ -1,0 +1,53 @@
+body {
+  background-color: #e7ff00;
+  margin-left: 75px;
+  margin-right: 75px;
+  margin-top: 50px;
+  margin-bottom: 75px;
+  font-family: "JetBrains Mono", Consolas, "Courier New", Courier, monospace;
+}
+
+h1, h2, h3, h4 {
+  font-family: Georgia, "Palatino Linotype", Palatino, "Times New Roman", serif;
+  color: crimson;
+}
+
+.resist {
+  list-style: none;
+}
+
+.container {
+    display: grid;
+    grid-template-rows:
+      . 1fr;
+    grid-template-columns: 
+      minmax(20ch, 30ch) 
+      minmax(50ch, 75ch) 
+      minmax(50ch, 75ch) 
+      minmax(20ch, 30ch); 
+    grid-template-areas:
+      "... typehead .... ........."
+      "toc intro    main directory";
+    column-gap: 50px;
+    row-gap: 25px;
+}
+.guide{
+  grid-column: 3;
+  grid-area: main;
+}
+.toc{
+  grid-column: 1;
+  grid-area: toc;
+}
+.typehead{
+  grid-area: typehead;
+ 
+}
+.intro {
+  grid-column: 2;
+  grid-area: intro;
+}
+.directory{
+  grid-column: 4;
+  grid-area: directory;
+}
