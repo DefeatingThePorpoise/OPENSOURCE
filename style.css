@@ -1,23 +1,22 @@
 body {
   background-color: #e7ff00;
-  margin-left: 50px;
-  margin-right: 75px;
-  margin-top: 50px;
-  margin-bottom: 75px;
+  margin-left: 10%;
+  margin-right: 6%;
+  margin-top: 8%;
+  margin-bottom: 15%;
   font-family: "JetBrains Mono", Consolas, "Courier New", Courier, monospace;
 }
-
 h1, h2, h3, h4 {
   font-family: Georgia, "Palatino Linotype", Palatino, "Times New Roman", serif;
   color: crimson;
 }
-
 .resist {
   list-style: none;
 }
 
-.container {
+.container{
     display: grid;
+    min-width: 0;
     grid-template-rows:
       . 1fr;
     grid-template-columns: 
@@ -30,6 +29,10 @@ h1, h2, h3, h4 {
       "toc intro    main directory";
     column-gap: 50px;
     row-gap: 25px;
+}
+
+.container > * {
+  min-width: 0;
 }
 
 @media (max-width: 180ch){ 
@@ -54,12 +57,11 @@ h1, h2, h3, h4 {
       "main          main";
   }
 }
+
 .guide{
-  grid-column: 3;
   grid-area: main;
 }
 .toc{
-  grid-column: 1;
   grid-area: toc;
 }
 .typehead{
@@ -67,10 +69,8 @@ h1, h2, h3, h4 {
  
 }
 .intro {
-  grid-column: 2;
   grid-area: intro;
 }
 .directory{
-  grid-column: 4;
   grid-area: directory;
 }
