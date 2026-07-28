@@ -32,15 +32,16 @@ h1, h2, h3, h4 {
     row-gap: 25px;
 }
 
-@media (max-width: calc(210ch + 150px)) {
+@media (max-width: 120ch) {
   .container {
     grid-template-columns: 
-      minmax(20ch, 30ch) 
+      1fr
       1fr;
     grid-template-areas:
-      "...      typehead"
-      "toc      intro"
-      "directory     main";
+      "typehead  typehead"
+      "toc      directory"
+      "intro        intro"
+      "main          main";
   }
 }
 
