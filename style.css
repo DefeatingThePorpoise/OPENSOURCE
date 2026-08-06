@@ -18,7 +18,7 @@ h1, h2, h3, h4 {
     display: grid;
     min-width: 0;
     grid-template-rows:
-      . 1fr;
+     1fr;
     grid-template-columns: 
       minmax(20ch, 30ch) 
       minmax(50ch, 75ch) 
@@ -73,4 +73,43 @@ h1, h2, h3, h4 {
 }
 .directory{
   grid-area: directory;
+}
+
+.footer {
+  position: fixed;
+  left: -20px;
+  top: 0;
+  height: 100%;
+  color: #fff;
+  width: 100%;
+  writing-mode: vertical-lr;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.footer span {
+  display: inline-block;
+  position: absolute;
+  width: fit-content;
+  font-weight: bold;
+  height: fit-content;
+  animation: marquee 30s linear infinite; 
+}
+
+@keyframes marquee {
+    0%   { transform: translateY(-750vh); }
+  100% { transform: translateY(150vh); }
+}
+
+.ascii {
+  text-align: center;
+}
+
+.expand{
+  color: #0000EE;
+}
+
+.fence{
+  margin: 0;
+  padding: 0;
 }
