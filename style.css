@@ -80,11 +80,13 @@ h1, h2, h3, h4 {
   left: -20px;
   top: 0;
   height: 100%;
+  width: 40px;
   color: #fff;
   width: 100%;
   writing-mode: vertical-lr;
   white-space: nowrap;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .footer span {
