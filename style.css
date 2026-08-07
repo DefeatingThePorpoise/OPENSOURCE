@@ -112,6 +112,8 @@ h1, h2, h3, h4 {
 }
 
 .fence{
-  margin: 0;
-  padding: 0;
+position: relative;
+  width: 100%;
+  height: 20%;
+  aspect-ratio: 9/ 5;
 }
