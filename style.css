@@ -2,7 +2,7 @@ body {
   background-color: #e7ff00;
   margin-left: 10%;
   margin-right: 6%;
-  margin-top: 4%;
+  margin-top: 8%;
   margin-bottom: 15%;
   font-family: "JetBrains Mono", Consolas, "Courier New", Courier, monospace;
 }
@@ -45,16 +45,15 @@ h1, h2, h3, h4 {
   } 
 }
 
-@media (max-width: 120ch){
+@media (max-width: 120ch) {
   .container {
-    grid-template-columns: 
-      1fr
-      1fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
-      "typehead  typehead"
-      "toc      directory"
-      "intro        intro"
-      "main          main";
+      "typehead"
+      "toc"
+      "intro"
+      "main"
+      "directory";
   }
 }
 
@@ -75,45 +74,26 @@ h1, h2, h3, h4 {
   grid-area: directory;
 }
 
-.footer {
-  position: fixed;
-  left: -20px;
-  top: 0;
-  height: 100%;
-  width: 40px;
-  color: #fff;
-  width: 100%;
-  writing-mode: vertical-lr;
-  white-space: nowrap;
-  overflow: hidden;
-  pointer-events: none;
-}
 
-.footer span {
-  display: inline-block;
-  position: absolute;
-  width: fit-content;
-  font-weight: bold;
-  height: fit-content;
-  animation: marquee 30s linear infinite; 
-}
 
-@keyframes marquee {
-    0%   { transform: translateY(-750vh); }
-  100% { transform: translateY(150vh); }
-}
 
-.ascii {
-  text-align: center;
-}
+
 
 .expand{
   color: #0000EE;
 }
 
-.fence{
-position: relative;
-  width: 100%;
-  height: 20%;
-  aspect-ratio: 9/ 5;
+
+
+
+.ascii {
+  text-align: center;
+  white-space: pre;
+  overflow-x: auto;
+  font-family: monospace;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0;
 }
+
+
